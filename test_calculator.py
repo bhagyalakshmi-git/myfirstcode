@@ -2,6 +2,7 @@ import pytest
 
 from calculator import (
     add,
+    combined_formula,
     divide,
     modulo,
     multiply,
@@ -48,3 +49,12 @@ def test_square_root():
 def test_square_root_of_negative_number():
     with pytest.raises(ValueError, match="square root of a negative number"):
         square_root(-1)
+
+
+def test_combined_formula():
+    assert combined_formula(5, 2) == 441
+
+
+def test_combined_formula_when_modulo_is_zero():
+    with pytest.raises(ValueError, match="Cannot divide by zero"):
+        combined_formula(6, 3)

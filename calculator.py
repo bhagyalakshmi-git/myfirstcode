@@ -35,6 +35,10 @@ def square_root(a):
     return sqrt(a)
 
 
+def combined_formula(a, b):
+    return power(divide(multiply(add(a, b), subtract(a, b)), modulo(a, b)), b)
+
+
 if __name__ == "__main__":
     print("Calculator Demo")
     print("20 + 5 =", add(20, 5))
@@ -44,3 +48,4 @@ if __name__ == "__main__":
     print("2 ** 3 =", power(2, 3))
     print("10 % 3 =", modulo(10, 3))
     print("sqrt(25) =", square_root(25))
+    print("Combined formula (a=5, b=2) =", combined_formula(5, 2))
